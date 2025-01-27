@@ -17,7 +17,6 @@ function eggCaught(egg) {
     const eggRect = egg.getBoundingClientRect();
     const eggLeft = eggRect.left;
     const eggRight = eggRect.right;
-    // const eggTop = eggRect.top - 120;
     const eggBottom = eggRect.bottom - 120;
 
     console.log(basketTop, eggBottom)
@@ -53,9 +52,3 @@ function droppedEgg(egg, eggY) {
 }
 
 export { collision }
-
-
-// console.log(basketLeft)
-// console.log(eggLeft)
-// console.log(basketRight)
-// console.log(eggRight)
