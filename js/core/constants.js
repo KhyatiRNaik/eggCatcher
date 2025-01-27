@@ -43,5 +43,4 @@ export default{
     EGG_SPEED: EGG_SPEED,
     EGG_INTERVAL: EGG_INTERVAL,
     HENS: HENS
-    // HEN1: HEN1, HEN2: HEN2, HEN3:HEN3
 }
