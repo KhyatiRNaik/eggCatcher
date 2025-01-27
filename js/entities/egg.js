@@ -45,15 +45,3 @@ function clearDroppedEggs() {
 }
 
 export { createEggs, clearEggs, clearDroppedEggs }
-
-       
-        // if (eggY < 370 && constants.PLAY) {
-        //     eggY += constants.EGG_SPEED;
-        //     egg.style.top = eggY + "px";
-        //     requestAnimationFrame(step);
-        // } else if (eggY >= 370) {
-        //     droppedEgg(egg);
-        // }
-        // else if (!constants.PLAY) {
-        //     clearEggs();
-        // }
