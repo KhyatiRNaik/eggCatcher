@@ -32,12 +32,10 @@ function animateEgg(egg, eggY) {
     step();
 }
 
-
 function clearEggs() {
     const eggs = document.querySelectorAll('.egg');
     eggs.forEach(egg => egg.remove());
 }
-
 
 function clearDroppedEggs() {
     const droppedEggs = document.querySelectorAll('.dropped_egg');
