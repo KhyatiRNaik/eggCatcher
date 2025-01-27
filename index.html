@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Catcher</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    
+    <div id="container" class="container-menu">
+        
+        <!-- IN MENU  -->
+        <button type="button" class="btn menu_page_btns for_text" id="instruct_btn">How To <br>Play</button>
+        <button type="button" class="btn menu_page_btns for_text" id="start_btn">Start</button>
+
+        <!-- IN GAME -->
+         <button type="button" class="btn for_text" id="menu_btn">Menu</button>
+         <label class="btn for_text" id="score_label">Score: </label>
+         <div class="btn for_text" id="lives_label">Lives: </div>         
+
+         <div class="for_text" id="game_text"></div>
+        <div class="hens">
+            <div class="hen" id="hen_1"></div>
+            <div class="hen" id="hen_2"></div>
+            <div class="hen" id="hen_3"></div>
+        </div>
+
+        <div id="basket"></div>
+    </div>
+
+    <script type="module" src="./js/game.js"></script>
+</body>
+</html>

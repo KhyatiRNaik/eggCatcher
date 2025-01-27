@@ -1,0 +1,176 @@
+:root{
+    --hen-1-y: 50px;
+    --hen-1-x: 140px;
+
+    --hen-2-y: 65px;
+    --hen-2-x: 280px;
+
+    --hen-3-y: 72px;
+    --hen-3-x: 440px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.for_text{
+    font-family:monospace;
+    color: white;
+}
+
+/* MENU  */
+
+#container{
+    height: 440px;
+    width: 700px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 300px;
+    top: 120px;
+    z-index: -100;
+    cursor:default;
+}
+
+.container-menu{
+    background-image: url("../assests/menu_bg.jpg");
+}
+
+.container-game{
+    background-image: url("../assests/game_bg.png");
+}
+
+.btn{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#instruct_btn{
+    position: absolute;
+    left: 85px;
+    top: 285px;
+    transform: rotate(-15deg);
+}
+
+#start_btn{
+    position: absolute;
+    left: 530px;
+    top: 270px;
+}
+
+.btn:hover{
+    color: rgb(224, 223, 223);
+}
+
+/* GAME */
+
+#menu_btn{
+    position: absolute;
+    height: 25px;
+    width: fit-content;
+    top: 15px;
+    left: 20px;
+    background-image: url('../assests/menu_btn.jpg');
+    display: none;
+    border: 1px rgba(117, 39, 39, 0.731) solid;
+    border-radius: 4px;
+}
+
+#game_text{
+    background-color: black;
+    /* background-image: url('../assests/menu_btn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    position: absolute;
+    left: 200px;
+    top: 180px;
+    font-size: 3em;
+    display: none;
+    text-align: center;
+}
+
+label{
+    font-size: 1em;
+    position: absolute;
+    top: 20px;
+}
+
+#lives_label{
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    display: none;
+}
+
+#score_label{
+    left: 600px;
+    display: none;
+}
+
+/* HEN */
+
+.hen{
+    height: 54px;
+    width: 70px;
+    border-radius: 0px 0px 40px 23px;
+    background-image: url("../assests/hen.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+#hen_1{
+    left: var(--hen-1-x);
+    top: var(--hen-1-y);
+}
+
+#hen_2{
+    left: var(--hen-2-x);
+    top: var(--hen-2-y);
+    transform: rotate(5deg);
+}
+
+#hen_3{
+    left: var(--hen-3-x);
+    top: var(--hen-3-y);
+    transform: rotate(-10deg);
+}
+
+/* BUCKET */
+
+#basket{
+    height: 40px;
+    width: 70px;
+    background-image: url('../assests/basket.png');
+    background-repeat: no-repeat;
+    position: relative;
+    top: 350px;
+    left: 140px;
+    display: none;
+    transition: right 2s ease;
+    border: 1px black solid;
+    z-index: -2;
+}
+
+/* Egg */
+
+.egg{
+    background-image: url('../assests/egg_grey.png');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 20px;
+    position: absolute;
+    z-index: -1;
+}
+
+.dropped_egg{
+    background-image: url('../assests/bullseye.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 35px;
+    position: absolute;
+    z-index: -1;
+}
