@@ -10,6 +10,7 @@ function createEggs(hen) {
     egg.style.left = eggX + 'px';
     egg.style.top = eggY + 'px';
 
+    console.log(constants.EGG_INTERVAL) //remove
     constants.CONTAINER.appendChild(egg);
 
     animateEgg(egg, eggY);
