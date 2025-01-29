@@ -13,7 +13,7 @@ const BASKET = document.getElementById('basket');
 const BASKET_SPEED = 25;
 let BASKET_POS = 140;
 let EGG_SPEED = 2;
-let EGG_INTERVAL = 2500;
+let EGG_INTERVAL = 100;
 const HENS = [{
     x: 140,
     y: 50

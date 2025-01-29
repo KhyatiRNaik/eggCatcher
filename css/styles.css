@@ -151,7 +151,6 @@ label{
     left: 140px;
     display: none;
     transition: right 2s ease;
-    border: 1px black solid;
     z-index: -2;
 }
 

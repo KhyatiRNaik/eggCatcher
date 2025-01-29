@@ -3,7 +3,7 @@ import constants from "../core/constants.js";
 
 function createEggs(hen) {
     let eggX = 25 + hen.x;
-    let eggY = 20 + hen.y;
+    let eggY = 10 + hen.y;
 
     let egg = document.createElement('div');
     egg.classList.add('egg');
@@ -22,7 +22,7 @@ function animateEgg(egg, eggY) {
             clearEggs();
         }
         else {
-            if (eggY <= 370 && !collision(egg, eggY)) {
+            if ((eggY >=368 || eggY <= 372) && !collision(egg, eggY)) {
                 eggY += constants.EGG_SPEED;
                 egg.style.top = eggY + "px";
                 requestAnimationFrame(step);

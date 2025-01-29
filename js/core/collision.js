@@ -4,10 +4,10 @@ import constants from "./constants.js";
 import { updateLives, updateScore } from "./utils.js";
 
 function collision(egg, eggY) {
-    return (eggCaught(egg) || droppedEgg(egg, eggY))
+    return (eggCaught(egg, eggY) || droppedEgg(egg, eggY))
 }
 
-function eggCaught(egg) {
+function eggCaught(egg, eggY) {
     const basketRect = constants.BASKET.getBoundingClientRect();
     const basketLeft = basketRect.left;
     const basketRight = basketRect.right;
@@ -19,7 +19,7 @@ function eggCaught(egg) {
     const eggRight = eggRect.right;
     const eggBottom = eggRect.bottom - 120;
 
-    console.log(basketTop, eggBottom)
+    console.log(basketTop, eggY)
 
     if (basketLeft < eggLeft && basketRight > eggRight && basketTop <= eggBottom && basketBottom >= eggBottom) {
         egg.remove();
@@ -27,6 +27,9 @@ function eggCaught(egg) {
         updateScore();
         return true;
     }
+    // else if(eggY >= eggBottom){
+    //     droppedEgg();
+    // }
     return false;
 }
 
