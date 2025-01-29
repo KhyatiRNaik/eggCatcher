@@ -19,7 +19,7 @@ function eggCaught(egg, eggY) {
     const eggRight = eggRect.right;
     const eggBottom = eggRect.bottom - 120;
 
-    console.log(basketTop, eggY)
+    //console.log(basketTop, eggY)
 
     if (basketLeft < eggLeft && basketRight > eggRight && basketTop <= eggBottom && basketBottom >= eggBottom) {
         egg.remove();
