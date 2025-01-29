@@ -11,6 +11,7 @@ function selectHen() {
 }
 
 function layEggs() {
+    console.log(constants.EGG_INTERVAL)
     if(interval){
         clearInterval(interval)
     }
