@@ -33,6 +33,15 @@ function game_init() {
     updateScore();
 
     initBasketMovement();
+
+    document.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        if (constants.PLAY)
+            pauseGame();
+        else
+            game();
+    }
+})
 }
 
 function game() {
@@ -63,13 +72,4 @@ function pauseGame() {
 
 constants.START_BTN.addEventListener('click', function () {
     game_init();
-})
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        if (constants.PLAY)
-            pauseGame();
-        else
-            game();
-    }
 })
