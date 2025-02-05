@@ -34,8 +34,8 @@ const SCORE_LABEL = document.getElementById('score_label');
 const LIVES_LABEL = document.getElementById('lives_label');
 const MENU_PAGE_BTNS = document.querySelectorAll('.menu_page_btns');
 const MENU_BTN = document.getElementById('menu_btn');
+const RESTART_BTN = document.getElementById('restart_btn');
 const DROPPED_EGG_SOUND = document.getElementById('dropped_egg_sound');
-
 
 export default{
     BASE: BASE,
@@ -62,5 +62,6 @@ export default{
     LIVES_LABEL: LIVES_LABEL,
     MENU_PAGE_BTNS: MENU_PAGE_BTNS,
     MENU_BTN: MENU_BTN,
+    RESTART_BTN: RESTART_BTN,
     DROPPED_EGG_SOUND: DROPPED_EGG_SOUND,
 }

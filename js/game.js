@@ -62,11 +62,13 @@ export function endGame() {
 
     constants.GAME_TEXT.innerHTML = "Your final score<br> is: " + constants.SCORE;
     setVisibility(constants.GAME_TEXT, true);
+    setVisibility(constants.RESTART_BTN, true)
 
     updateLives();
     clearEggs();
 
     document.removeEventListener('keydown', startGameListener);
+    constants.RESTART_BTN.addEventListener('click', restartGame);
 }
 
 function pauseGame() {

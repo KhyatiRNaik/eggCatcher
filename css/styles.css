@@ -66,23 +66,34 @@ body{
 
 /* GAME */
 
-#menu_btn{
+#menu_btn, #restart_btn{
     position: absolute;
     height: 25px;
-    width: fit-content;
-    top: 15px;
-    left: 20px;
     background-image: url('../assests/menu_btn.jpg');
-    display: none;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 1px rgba(117, 39, 39, 0.731) solid;
     border-radius: 4px;
 }
 
+#menu_btn{
+    top: 15px;
+    display: none;
+    left: 20px;
+}
+
+#restart_btn{
+    top: 280px;
+    display: none;
+    left: 350px;
+}
+
 #game_text{
-    background-color: black;
+    background-color: white;
     /* background-image: url('../assests/menu_btn.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
+    color: black;
     position: absolute;
     left: 200px;
     top: 180px;
