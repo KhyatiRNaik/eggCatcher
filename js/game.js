@@ -14,9 +14,9 @@ function game_init() {
 
     constants.PLAY = false;
     constants.SCORE = 0;
-    constants.LIVES = 5;
-    constants.EGG_SPEED = 2;
-    constants.EGG_INTERVAL = 2500;
+    constants.LIVES = constants.BASE.LIVES;
+    constants.EGG_SPEED = constants.BASE.EGG_SPEED;
+    constants.EGG_INTERVAL = constants.BASE.EGG_INTERVAL;
 
     setVisibility(constants.BASKET, true);
     setVisibility(constants.MENU_BTN, true);
@@ -34,14 +34,16 @@ function game_init() {
 
     initBasketMovement();
 
-    document.addEventListener('keydown', function (event) {
+    document.addEventListener('keydown', startGameListener)
+}
+
+function startGameListener(event) {
     if (event.key === 'Enter') {
         if (constants.PLAY)
             pauseGame();
         else
             game();
     }
-})
 }
 
 function game() {
@@ -55,13 +57,16 @@ export function restartGame() {
 }
 
 export function endGame() {
+    constants.PLAY = false;
     constants.LIVES = 0;
+
+    constants.GAME_TEXT.innerHTML = "Your final score<br> is: " + constants.SCORE;
+    setVisibility(constants.GAME_TEXT, true);
+
     updateLives();
     clearEggs();
-    constants.PLAY = false;
-   
-    game_init();
 
+    document.removeEventListener('keydown', startGameListener);
 }
 
 function pauseGame() {
