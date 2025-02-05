@@ -25,13 +25,15 @@ function layEggs() {
         }
 
         if(constants.SCORE >= eggIntervalInc){
-            // if(constants.EGG_INTERVAL > 100)
-            //     constants.EGG_INTERVAL -= 500;
+            if(constants.EGG_INTERVAL > 500){
+                constants.EGG_INTERVAL -= 100;
+                clearInterval(interval);
+                layEggs();
+            }
             if(constants.EGG_SPEED < 4)
                 constants.EGG_SPEED ++;   
-            eggIntervalInc += 3;
+            eggIntervalInc += 5;
         }
-
     }, constants.EGG_INTERVAL);
 }
 
