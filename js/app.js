@@ -6,32 +6,12 @@ import "./screens/menu.js";
 import "./screens/instructions.js";
 import { initBasketMovement } from "./entities/basket.js";
 import { clearEggs } from "./entities/egg.js";
+import { hideInstructions } from "./screens/instructions.js";
+import { showGamePage } from "./screens/game.js";
 
 
 function game_init() {
-    constants.CONTAINER.classList.remove("container-menu");
-    constants.CONTAINER.classList.add("container-game");
-
-    constants.PLAY = false;
-    constants.SCORE = 0;
-    constants.LIVES = constants.BASE.LIVES;
-    constants.EGG_SPEED = constants.BASE.EGG_SPEED;
-    constants.EGG_INTERVAL = constants.BASE.EGG_INTERVAL;
-
-    setVisibility(constants.BASKET, true);
-    setVisibility(constants.MENU_BTN, true);
-    setVisibilityMany(constants.HEN, true);
-
-    constants.GAME_TEXT.innerHTML = "Press ENTER to <br>START";
-    setVisibility(constants.GAME_TEXT, true);
-
-    setVisibilityMany(constants.MENU_PAGE_BTNS, false);
-
-    setVisibility(constants.LIVES_LABEL, true);
-    updateLives();
-    setVisibility(constants.SCORE_LABEL, true);
-    updateScore();
-
+    showGamePage();
     initBasketMovement();
 
     document.addEventListener('keydown', startGameListener)
