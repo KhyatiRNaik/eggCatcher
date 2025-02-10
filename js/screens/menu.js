@@ -1,5 +1,6 @@
 import constants from "../core/constants.js";
 import { setVisibility, setVisibilityMany } from "../core/utils.js";
+import { hideInstructions, showInstructPage } from "./instructions.js";
 
 constants.MENU_BTN.addEventListener('click', function() {
     showMenuPage();
@@ -10,18 +11,18 @@ function showMenuPage() {
     
     constants.CONTAINER.classList.add("container-menu");    
     constants.CONTAINER.classList.remove("container-game");
+    constants.CONTAINER.classList.remove("container-instruct");
 
-    setVisibility(constants.BASKET, false);
-    setVisibility(constants.MENU_BTN, false);
-    setVisibility(constants.LIVES_LABEL, false);
-    setVisibility(constants.SCORE_LABEL, false);
-    setVisibility(constants.GAME_TEXT, false);
-    setVisibilityMany(constants.HEN, false);
-    setVisibility(constants.RESTART_BTN, false);
+    setVisibilityMany(constants.GAME_ELEMENTS, false);
 
-    setVisibilityMany(constants.MENU_PAGE_BTNS, true);
+    setVisibilityMany(constants.MENU_ELEMENTS, true);
+
+    hideInstructions();
 
 }
 
+constants.INSTRUCT_BTN.addEventListener('click', function(){
+    showInstructPage();
+});
 
 export { showMenuPage }
