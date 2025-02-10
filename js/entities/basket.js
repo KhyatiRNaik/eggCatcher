@@ -4,7 +4,7 @@ function enableBasketMovement() {
     constants.CONTAINER.addEventListener("mousemove", function (event) {
         const containerRect = constants.CONTAINER.getBoundingClientRect();
 
-        let mouseX = event.clientX - containerRect.left;
+        let mouseX = event.clientX - containerRect.left - 32;
 
         if (mouseX >= 100 && mouseX <= 480) {
             constants.BASKET.style.left = `${mouseX}px`;
