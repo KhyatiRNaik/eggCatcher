@@ -1,5 +1,5 @@
 import { clearDroppedEggs } from "../entities/egg.js";
-import { endGame } from "../game.js";
+import { endGame } from "../app.js";
 import constants from "./constants.js";
 import { updateLives, updateScore } from "./utils.js";
 
