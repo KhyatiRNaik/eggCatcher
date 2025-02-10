@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,40 @@
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
+
 <body>
-    
+
     <div id="container" class="container-menu">
-        
+
         <!-- IN MENU  -->
-        <button type="button" class="btn menu_page_btns for_text" id="instruct_btn">How To <br>Play</button>
-        <button type="button" class="btn menu_page_btns for_text" id="start_btn">Start</button>
+        <!-- <h1 id="game_title">Egg Catcher</h1> -->
+        <button type="button" class="btn menu_element for_text" id="instruct_btn">How To <br>Play</button>
+        <button type="button" class="btn menu_element for_text" id="start_btn">Start</button>
 
         <!-- IN GAME -->
-         <button type="button" class="btn for_text" id="menu_btn">Menu</button>
-         <label class="btn for_text" id="score_label">Score: </label>
-         <div class="btn for_text" id="lives_label">Lives: </div>         
+        <button type="button" class="btn for_text game_element" id="menu_btn">Menu</button>
+        <label class="btn for_text game_element" id="score_label">Score: </label>
+        <div class="btn for_text game_element" id="lives_label">Lives: </div>
 
-         <div class="for_text" id="game_text"></div>
-        <div class="hens">
+        <div class="for_text game_element" id="game_text"></div>
+        <div class="hens game_element">
             <div class="hen" id="hen_1"></div>
             <div class="hen" id="hen_2"></div>
             <div class="hen" id="hen_3"></div>
         </div>
 
-        <div id="basket"></div>
-        <button type="button" class="btn menu_page_btns for_text" id="restart_btn">Restart</button>
+        <div id="basket" class="game_element"></div>
+        <button type="button" class="btn for_text game_element" id="restart_btn">Restart</button>
+
+        <!-- IN INTRUCTIONS -->
+        <div id="instruct_text" class="for_text"></div>
     </div>
 
     <!-- AUDIOS -->
     <audio id="dropped_egg_sound" src="./assests/audio/egg-crack1.mp3" preload="auto"></audio>
-    
 
-    <script type="module" src="./js/game.js"></script>
+
+    <script type="module" src="./js/app.js"></script>
 </body>
+
 </html>
