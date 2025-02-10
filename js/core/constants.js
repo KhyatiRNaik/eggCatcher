@@ -32,9 +32,11 @@ const START_BTN = document.getElementById('start_btn');
 const CONTAINER = document.getElementById('container');
 const SCORE_LABEL = document.getElementById('score_label');
 const LIVES_LABEL = document.getElementById('lives_label');
-const MENU_PAGE_BTNS = document.querySelectorAll('.menu_page_btns');
+const MENU_ELEMENTS = document.querySelectorAll('.menu_element');
+const GAME_ELEMENTS = document.querySelectorAll('.game_element');
 const MENU_BTN = document.getElementById('menu_btn');
 const RESTART_BTN = document.getElementById('restart_btn');
+const INSTRUCT_BTN = document.getElementById('instruct_btn');
 const DROPPED_EGG_SOUND = document.getElementById('dropped_egg_sound');
 
 export default{
@@ -60,8 +62,10 @@ export default{
     CONTAINER: CONTAINER,
     SCORE_LABEL: SCORE_LABEL,
     LIVES_LABEL: LIVES_LABEL,
-    MENU_PAGE_BTNS: MENU_PAGE_BTNS,
+    MENU_ELEMENTS: MENU_ELEMENTS,
+    GAME_ELEMENTS: GAME_ELEMENTS,
     MENU_BTN: MENU_BTN,
     RESTART_BTN: RESTART_BTN,
+    INSTRUCT_BTN: INSTRUCT_BTN,
     DROPPED_EGG_SOUND: DROPPED_EGG_SOUND,
 }
